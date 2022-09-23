@@ -10,15 +10,14 @@ Modo de preparo Array
 
 */
 const todasAsReceitas = [];
-const receitasProcuradas = [];
+
 
 receita1 = {
     nomeDoPrato: "Camarão na Moranga",
     tempoDePreparo: 90,
     porcoes: 6,
     tipo: "Frutos do mar",
-    jaFez: true,
-    avaliacaoPessoal: 4.5,
+    jaFez: true,    
     ingredientes: [
         {
             nomeDoingrediente: "Camarão",
@@ -83,14 +82,15 @@ receita1 = {
         "Desligue o fogo e acrescente o creme de leite e o cheiro-verde.",
         "Misture bem e adicione por último o requeijão.",
         "Passe um pouco de requeijão no interior da moranga e despeje o creme de camarão."],
+    
+    linkImagem: "./assets/camarao-na-moranga/camarao-na-moranga-1.png",
 };
 receita2 = {
     nomeDoPrato: "Molho branco",
     tempoDePreparo: 30,
     porcoes: 8,
     tipo: "Molho",
-    jaFez: true,
-    avaliacaoPessoal: 0,
+    jaFez: true,    
     ingredientes: [
         {
             nomeDoingrediente: "Cebola pequena",
@@ -139,14 +139,15 @@ receita2 = {
         "Dissolva o amido no leite e adicione ao molho.",
         "Quando o molho estiver com uma consistência firme, desligue o fogo e acrescente o queijo, mexendo bem, para ele não grudar.",
         "Sirva com macarrão ou arroz de forno."],
+
+    linkImagem: "./assets/molho-branco/molho-branco-1.png",
 };
 receita3 = {
-    nomeDoPrato: "Musse de limão",
+    nomeDoPrato: "Mousse de limão",
     tempoDePreparo: 10,
     porcoes: 10,
     tipo: "Doces",
-    jaFez: true,
-    avaliacaoPessoal: 0,
+    jaFez: true,    
     ingredientes: [
         {
             nomeDoingrediente: "Leite condensado",
@@ -167,53 +168,25 @@ receita3 = {
     modoDePreparo: ["Coloque no liquidificador o creme de leite (com soro mesmo) e o leite condensado.",
         "Bata um pouco e depois vá acrescentando o suco do limão, aos poucos.",
         "Ele vai ficar bem consistente, leve à geladeira."],
+
+    linkImagem: "./assets/musse-de-limao/musse-de-limao-1.png",
 };
 
 
-
-if (receita1.jaFez) {
-    todasAsReceitas.push(receita1)
-} else {
-    alert(receita1.nomeDoPrato + " não adcionado ao livro pessoal de receita")
+const novaReceita = (objeto, arrayDeReceitas) => {
+    if(objeto.jaFez){
+        arrayDeReceitas.push(objeto)
+    }else{
+        alert(objeto.nomeDoPrato+" não adcionado ao livro pessoal de receita")
+    }
 }
-if (receita2.jaFez) {
-    todasAsReceitas.push(receita2)
-} else {
-    alert(receita2.nomeDoPrato + " não adcionado ao livro pessoal de receita")
-}
-
-
-if (receita3.jaFez) {
-    todasAsReceitas.push(receita3)
-} else {
-    alert(receita3.nomeDoPrato + " não adcionado ao livro pessoal de receita")
-}
-
+novaReceita(receita1,todasAsReceitas)
+novaReceita(receita2,todasAsReceitas)
+novaReceita(receita3,todasAsReceitas)
 
 
 
 console.log(todasAsReceitas );
-
-// { Pensamento anterior
-// // for (let a in todasAsReceitas){    
-// //     todasAsReceitas[a].nomeDoPrato = todasAsReceitas[a].nomeDoPrato.toUpperCase();
-// //     console.log(`Nome do prato: ${todasAsReceitas[a].nomeDoPrato}
-// // Tempo de preparo: ${todasAsReceitas[a].tempoDePreparo} min
-// // Porções ${todasAsReceitas[a].porcoes}
-// // Tipo de prato: ${todasAsReceitas[a].tipo}
-// // Já experimentou a receita?: ${todasAsReceitas[a].jaFez}`);
-// //     for(let b in todasAsReceitas[a].ingredientes){
-// //         console.log(todasAsReceitas[a].ingredientes[b].quantidade + " " + todasAsReceitas[a].ingredientes[b].medida + " de " + todasAsReceitas[a].ingredientes[b].nomeDoingrediente)
-// //     }
-// //     console.log("\nMODO DE PREPARO")
-// //     for(let i in todasAsReceitas[a].modoDePreparo){
-// //         console.log((Number(i) + 1) + "-" + todasAsReceitas[a].modoDePreparo[i])
-// //         todasAsReceitas[a].stringModoDePreparo = todasAsReceitas[a].modoDePreparo.join()       
-// //     }  
-// //     console.log(todasAsReceitas[a].stringModoDePreparo); 
-// // }
-// } 
-
      
 
 for (let a of todasAsReceitas){
@@ -232,8 +205,7 @@ function devolvendoString (objeto){
     for(let i in objeto){
         arrayObjeto.push(objeto[i])
     }
-    stringDoObjeto = arrayObjeto.join() 
-  //  console.log(stringDoObjeto )
+    stringDoObjeto = arrayObjeto.join()   
   
     return stringDoObjeto;
 
@@ -243,11 +215,7 @@ function devolvendoString (objeto){
 devolvendoString (receita1)
 
 function procuraDeReceita(receitaObjeto, qualreceita){
-    console.log(receitaObjeto);
-    for(let i in receitaObjeto){
-        console.log(receitaObjeto[i].nomeDoPrato);
-        console.log(i);
-        console.log(qualreceita);
+    for(let i in receitaObjeto){       
         if(receitaObjeto[i].nomeDoPrato.toUpperCase() === qualreceita)
         {
             return receitaObjeto[i]
@@ -261,55 +229,6 @@ function procuraDeReceita(receitaObjeto, qualreceita){
 const receitaProcurada = prompt('Digite qual receita q vc quer').toUpperCase();
 
 console.log(procuraDeReceita(todasAsReceitas, receitaProcurada));
-
-
-
-// function parametrosDaReceita(objeto)
-// {
-//     for (let i in objeto){
-//         console.log(objeto[i]);
-//     }
-// }
-
-//  parametrosDaReceita(receita1)
- 
-// for(let i in todasAsReceitas){
-//     console.log( todasAsReceitas[i].nomeDoPrato );
-//     }
-
-// function checkReceita (arrayObjetos , string, funcao){ 
-//     const arrayReceita = []
-//     let stringObjeto =""
-//     for(let i in arrayObjetos){
-//         for(let j in arrayObjetos[i] ){
-//             //console.log("AAAA"+ arrayObjetos[i][j] );
-//             stringObjeto += arrayObjetos[i][j]
-//            // console.log( stringObjeto );
-//             if(stringObjeto.includes(string)){
-                
-//                 arrayReceita.push(arrayObjetos[i])
-                
-//             }
-//         }
-//     }
-//     if (arrayReceita.length === 0)
-//     {
-//         alert('receita não encontrada')
-//     }
-//     return arrayReceita
-
-//     // const mapDosObjetos = arrayObjetos.map((valor) => valor.nomeDoPrato)
-//     // const filtroObjeto = mapDosObjetos.filter((nome) => string === nome )   
-    
-
-//     // return filtroObjeto
-// }
-
-// const receitaProcurada = "Musse de limão"//prompt("Que receita voçê quer?")
-
-// console.log(checkReceita(todasAsReceitas, receitaProcurada))
-
-
 
 
 
