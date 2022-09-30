@@ -71,7 +71,7 @@ receita1 = {
         },
         {
             nomeDoingrediente: "Ketchup",
-            quantidade: "3",
+            quantidade: 3,
             medida: "Colheres de sopa"
         },
     ],
@@ -109,8 +109,8 @@ receita2 = {
         },
         {
             nomeDoingrediente: "Leite",
-            quantidade: 0.5,
-            medida: "Litros"
+            quantidade: 500,
+            medida: "ml"
         },
         {
             nomeDoingrediente: "Amido de milho",
@@ -161,7 +161,7 @@ receita3 = {
         },
         {
             nomeDoingrediente: "Suco de limão",
-            quantidade: 0.5,
+            quantidade: '1/2',
             medida: "Xícara"
         },
     ],
