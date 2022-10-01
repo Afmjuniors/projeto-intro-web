@@ -23,7 +23,7 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    font-size: 1.2em;
+    font-size: 1em;
     background-color: var(--cor-header-background);
 }
 
@@ -155,7 +155,7 @@ main {
     grid-column: 1 / -1;
     justify-self: center;
     align-self: center;
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: #3a331e;
 
 }
@@ -246,7 +246,7 @@ main {
     border-bottom: 1px solid black;
     align-self: flex-end;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: #3a331e;
 
 
@@ -275,7 +275,7 @@ main {
     margin-bottom: 2vh;
     text-align: center;
     border-bottom: 1px solid black;
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: #3a331e;
 
 }
@@ -398,14 +398,12 @@ footer {
 }
 
 .tabela>.tabela-info{
-    /* justify-items: center; */
+   
     justify-content: center; 
-    /* width: 100%; */
+   
     
 }
-.tabela-info{
-    /* width: 100%; */
-}
+
 
 
 
@@ -417,9 +415,7 @@ footer {
     margin-top: 1vw;
 }
 
-.titulo-ingredientes {
-    font-size: 1.2rem;
-}
+
 
 .ingrediente {
     width: 100%;
@@ -437,11 +433,7 @@ footer {
 
 }
 
-.titulo-modo {
-   
-    font-size: 1.2rem;
 
-}
 
 /* **************************FOOTER********************** */
 
