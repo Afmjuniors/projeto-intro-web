@@ -43,7 +43,8 @@ header {
 
 
 .form-conateiner {
-    min-height: 20px;
+    min-height: 2vw;
+    max-height: 7vw;
     max-width: 700px;
     width: 40%;
     height: 50%;
@@ -79,7 +80,6 @@ header {
     flex: 1;
     border: 0;
     outline: none;
-    /* padding: 1%; */
     font-size: 1rem;
     color: rgb(62, 59, 59);
 }
@@ -91,7 +91,8 @@ header {
 }
 
 .search-bar button img {
-    width: 2vw;
+   width: 2vw;
+  
     flex: 1;
 }
 
@@ -361,6 +362,7 @@ footer {
 }
 
 .nome-da-receita {
+    margin-top: 2vh;
     font-size: 1rem;
 }
 
