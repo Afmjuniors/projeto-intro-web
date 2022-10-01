@@ -46,7 +46,7 @@ header {
     min-height: 20px;
     max-width: 700px;
     width: 40%;
-    height: 60%;
+    height: 50%;
     background: linear-gradient(rgba(229, 222, 202, 0.9), rgba(229, 231, 203, 0.861));
     display: flex;
     align-items: center;
@@ -79,17 +79,19 @@ header {
     flex: 1;
     border: 0;
     outline: none;
-    padding: 1%;
-    font-size: 1.5rem;
+    /* padding: 1%; */
+    font-size: 1rem;
     color: rgb(62, 59, 59);
 }
 
 ::placeholder {
     color: rgb(62, 59, 59);
+    font-size: 1rem;
+    
 }
 
 .search-bar button img {
-    width: 30px;
+    width: 2vw;
     flex: 1;
 }
 
@@ -146,6 +148,7 @@ main {
 }
 
 .nome-da-receita {
+    margin-top: 4vh;
 
     grid-row: 1;
     grid-column: 1 / -1;
