@@ -33,6 +33,9 @@ header {
 #titulo:visited {
     color: black;
     height: 70%;
+    text-decoration: none;
+    color:#3a331e ;
+    
 
 }
 
@@ -149,6 +152,7 @@ main {
     justify-self: center;
     align-self: center;
     font-size: 1.5rem;
+    color: #3a331e;
 
 }
 
@@ -189,6 +193,7 @@ main {
 .tabela {
     text-align: center;
     margin-left: 1vw;
+    color: #3a331e;
 
 
 }
@@ -238,6 +243,7 @@ main {
     align-self: flex-end;
     text-align: center;
     font-size: 1.5rem;
+    color: #3a331e;
 
 
 }
@@ -266,6 +272,7 @@ main {
     text-align: center;
     border-bottom: 1px solid black;
     font-size: 1.5rem;
+    color: #3a331e;
 
 }
 
@@ -291,7 +298,13 @@ footer {
 
 #links-contato {}
 
-/* ************RESPOSAVIDADE************* */
+/*************************************************************************
+************************************************************************
+
+
+/* ************RESPOSAVIDADE*********************************
+************************************************************************
+******************************************************************* */
 
 
 
@@ -433,3 +446,12 @@ footer {
 }
 
 }
+@media screen and (min-device-width: 1200px ) {
+   :root{
+    font-size:   2vw;
+    
+   }
+    
+    
+}
+
