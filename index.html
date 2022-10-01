@@ -14,25 +14,95 @@
     <div id="conteiner">
 
         <header>
-            <h1 ><a id="titulo" href="./index.html">Livro de Receitas</a></h1>
+            <h1><a id="titulo" href="./index.html">Livro de Receitas</a></h1>
 
-            <form class="procura" action="#">
-                <label for="receita-procurada"></label>
-                <input class="pesquisa-form" id="box-input" type="text" name="recceita-procurada">
 
-                
-                    
-                    <button class="pesquisab" id="botao" type="submit">Buscar</button>
-                
+            <div class="form-conateiner">
+                <form class="search-bar" action="#">
+                    <label for="receita-procurada"></label>
+                    <input type="text" name="recceita-procurada" placeholder="Pesquisar...">
 
-            </form>
+                    <button class="form-btn" type="submit">
+                        <img class="imagem-lupa-black" src="./assets/Icones/lupa-50-b.png">
+                        <img class="imagem-lupa-azul" src="./assets/Icones/lupa-50-a.png">
+                    </button>
+
+                </form>
+            </div>
+
 
         </header>
         <main>
 
             <section class="receita">
                 <div class="nome-da-receita">
-                    <h2><a href="https://www.tudogostoso.com.br/receita/1106-camarao-na-moranga.html">Camarão na
+                    <h2> <a class="receitalink" href="https://www.tudogostoso.com.br/receita/1621-mousse-de-limao.html">Mousse
+                            de Limão</a>
+                    </h2>
+                </div>
+                <div class="visual">
+                    <img class="imagem" src="./assets/mousse-de-limao/mousse-de-limao-1.png"
+                        alt="Falha ao carregar a Imagem">
+
+                    <div class="tabela">
+
+                        <ul class="tabela-head">
+                            <li>Tempo</li>
+                            <li>Porção</li>
+                            <li>Tipo</li>
+                        </ul>
+        
+
+
+                        <ul class="tabela-info">
+                            <li>10 min</li>
+                            <li>10</li>
+                            <li>Doces</li>
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="titulo-ingredientes">
+                        <h3><strong>Ingredientes</strong></h3>
+                    </div>
+                    <li class="ingrediente">
+                        <span class="quantidade">1</span>
+                        <span class="medida">Lata</span>
+                        <span class="ingrediente">de Leite condensado</span>
+                    </li>
+                    <li class="ingrediente">
+                        <span class="quantidade">1</span>
+                        <span class="medida">Lata</span>
+                        <span class="ingrediente">de Creme de leite</span>
+                    </li>
+                    <li class="ingrediente">
+                        <span class="quantidade">1/2</span>
+                        <span class="medida">Xicara</span>
+                        <span class="ingrediente">de Suco de limão</span>
+                    </li>
+
+
+                </div>
+                <div class="modo-preparo">
+                    <div class="titulo-modo">
+                        <h3>Modo de Preparo</h3>
+                    </div>
+                    <div class="texto-modo-de-preparo">
+                        <ol>
+                            <li>Coloque no liquidificador o creme de leite (com soro mesmo) e o leite condensado.
+                            </li>
+                            <li>Bata um pouco e depois vá acrescentando o suco do limão, aos poucos.</li>
+                            <li>Ele vai ficar bem consistente, leve à geladeira.</li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+
+            <section class="receita">
+                <div class="nome-da-receita">
+                    <h2><a class="receitalink"
+                            href="https://www.tudogostoso.com.br/receita/1106-camarao-na-moranga.html">Camarão na
                             moranga</a>
                     </h2>
                 </div>
@@ -50,7 +120,7 @@
 
                         <ul class="tabela-info">
                             <li>90 min</li>
-                            <li>6 porçoes</li>
+                            <li>6</li>
                             <li>Frutos do Mar</li>
                         </ul>
 
@@ -185,27 +255,27 @@
             </section>
             <section class="receita">
                 <div class="nome-da-receita">
-                    <h2><a href="https://www.tudogostoso.com.br/receita/8072-molho-branco-para-macarrao.html">Molho
+                    <h2><a class="receitalink" href="https://www.tudogostoso.com.br/receita/8072-molho-branco-para-macarrao.html">Molho
                             Branco</a>
                     </h2>
                 </div>
                 <div class="visual">
                     <img class="imagem" src="./assets/molho-branco/molho-branco-1.png" alt="Falha ao carregar a Imagem">
                     <div class="tabela">
-                        
-                            <ul class="tabela-head">
-                                <li>Tempo</li>
-                                <li>Porção</li>
-                                <li>Tipo</li>
-                            </ul>
-                        
-                        
-                            <ul class="tabela-info">
-                                <li>30 min</li>
-                                <li>8 porçoes</li>
-                                <li>Molho</li>
-                            </ul>
-                        
+
+                        <ul class="tabela-head">
+                            <li>Tempo</li>
+                            <li>Porção</li>
+                            <li>Tipo</li>
+                        </ul>
+
+
+                        <ul class="tabela-info">
+                            <li>30 min</li>
+                            <li>8</li>
+                            <li>Molho</li>
+                        </ul>
+
                     </div>
                 </div>
                 <div class="info">
@@ -274,69 +344,7 @@
                     </div>
                 </div>
             </section>
-            <section class="receita">
-                <div class="nome-da-receita">
-                    <h2> <a href="https://www.tudogostoso.com.br/receita/1621-mousse-de-limao.html">Mousse
-                            de Limão</a>
-                    </h2>
-                </div>
-                <div class="visual">
-                    <img class="imagem" src="./assets/mousse-de-limao/mousse-de-limao-1.png"
-                        alt="Falha ao carregar a Imagem">
-
-                    <div class="tabela">
-                        
-                            <ul class="tabela-head">
-                                <li>Tempo</li>
-                                <li>Porção</li>
-                                <li>Tipo</li>
-                            </ul>
-                        
-                        
-                            <ul class="tabela-info">
-                                <li>10 min</li>
-                                <li>10 porçoes</li>
-                                <li>Doces</li>
-                            </ul>
-                        
-                    </div>
-                </div>
-                <div class="info">
-                    <div class="titulo-ingredientes">
-                        <h3><strong>Ingredientes</strong></h3>
-                    </div>
-                    <li class="ingrediente">
-                        <span class="quantidade">1</span>
-                        <span class="medida">Lata</span>
-                        <span class="ingrediente">de Leite condensado</span>
-                    </li>
-                    <li class="ingrediente">
-                        <span class="quantidade">1</span>
-                        <span class="medida">Lata</span>
-                        <span class="ingrediente">de Creme de leite</span>
-                    </li>
-                    <li class="ingrediente">
-                        <span class="quantidade">1/2</span>
-                        <span class="medida">Xicara</span>
-                        <span class="ingrediente">de Suco de limão</span>
-                    </li>
-
-
-                </div>
-                <div class="modo-preparo">
-                    <div class="titulo-modo">
-                        <h3>Modo de Preparo</h3>
-                    </div>
-                    <div class="texto-modo-de-preparo">
-                        <ol>
-                            <li>Coloque no liquidificador o creme de leite (com soro mesmo) e o leite condensado.
-                            </li>
-                            <li>Bata um pouco e depois vá acrescentando o suco do limão, aos poucos.</li>
-                            <li>Ele vai ficar bem consistente, leve à geladeira.</li>
-                        </ol>
-                    </div>
-                </div>
-            </section>
+           
         </main>
         <footer>
             <div id="informacoes">
