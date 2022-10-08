@@ -909,44 +909,30 @@ function input(event) {
     const palavras = inputDaPesquisa.value.split(' ')
     inputDaPesquisa.value = ''
     if(palavras[0].length>1){
-        console.log(palavras);
+       
     for (let word of palavras) {
 
         word = word.toLowerCase().replace('ã', 'a').replace('ç', 'c').replace('á', 'a').replace('à', 'a').replace('é', 'e').replace('ó', 'o').replace('ò', 'o').replace('ê','e')
         word = testeDicionario(word)
-        console.log(word);
-        if (word.length > 2) {
-            console.log('entrou');
-            for (let i in todasAsReceitas) {
-                const nome = todasAsReceitas[i].nomeDoPrato.toLowerCase().replace('ã', 'a').replace('ç', 'c').replace('á', 'a').replace('à', 'a').replace('é', 'e').replace('ó', 'o').replace('ò', 'o').replace('ê','e')
-                console.log(nome);
-                if(nome.includes(word)){
-                    todasAsReceitas[i].jaFez=true
-                }else{
-                    todasAsReceitas[i].jaFez=false
-                }
-               
-            }
+        
+        if (word.length > 2) {            
+            receitaProcurada = todasAsReceitas.filter((valor)=>{
+                const nome = valor.nomeDoPrato.toLowerCase().replace('ã', 'a').replace('ç', 'c').replace('á', 'a').replace('à', 'a').replace('é', 'e').replace('ó', 'o').replace('ò', 'o').replace('ê','e')
+                return nome.includes(word)
+            })   
 
         } 
 
     }
-    for(let j in todasAsReceitas){
-        if(todasAsReceitas[j].jaFez){
-           
-            receitaProcurada.push(todasAsReceitas[j])
-            cont++
-        }
-    }
 
 
-    if(cont===0)
+    if(receitaProcurada.length===0)
     {
         const textoResultado = `Não foi encontranda nenhuma receita com o termo \"${novaInputTexto}\"`
         const arcticoTexto = document.getElementById('escrita')
         arcticoTexto.innerText = textoResultado
     }else{
-        const textoResultado = `Foi encontrado ${cont} receita para: \"${novaInputTexto}\"`
+        const textoResultado = `Foi encontrado ${receitaProcurada.length} receita para: \"${novaInputTexto}\"`
     const arcticoTexto = document.getElementById('escrita')
     arcticoTexto.innerText = textoResultado
 
@@ -956,7 +942,7 @@ function input(event) {
         const arcticoTexto = document.getElementById('escrita')
         arcticoTexto.innerText = ''
 }
-    console.log(receitaProcurada);
+   
 
 
  
