@@ -23,6 +23,7 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
+
     flex-wrap: wrap;
     font-size: 2vw;
     background-color: var(--cor-header-background);
@@ -94,10 +95,11 @@ header {
 }
 
 .search-bar button img {
+
    width: 100%;
-   /* transform: translate(-25%, -25%); */
+
   
-    /* flex: 1; */
+
 }
 
 .search-bar button {
@@ -209,9 +211,14 @@ header {
     grid-column: 1 / -1;
     justify-self: center;
     align-self: center;
+
     font-size: clamp(2vw, 2vw,4px);
     color: #141108;
     text-align: center;
+
+ 
+
+
 
 }
 
