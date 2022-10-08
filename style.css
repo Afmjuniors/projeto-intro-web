@@ -15,7 +15,7 @@
 
 #conteiner {
     display: grid;
-    grid-template-rows: 10vh 1fr 10vh;
+    grid-template-rows: 16vh 1fr 10vh;
     background-color: var(--cor-main-background);
 }
 
@@ -23,8 +23,11 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    font-size: 1.2em;
+    flex-wrap: wrap;
+    font-size: 2vw;
     background-color: var(--cor-header-background);
+    box-shadow: 1px 2px 5px gray;
+   
 }
 
 #titulo a,
@@ -32,26 +35,27 @@ header {
 #titulo:link,
 #titulo:visited {
     color: black;
-    height: 70%;
+    height: 60%;
     text-decoration: none;
-    color:#3a331e ;
-    
-
+    font-size: clamp(1rem, 4vw, 2rem);
+ 
 }
 
 
 
 
 .form-conateiner {
-    min-height: 20px;
+    min-height: 2vw;
+    max-height: 7vw;
     max-width: 700px;
     width: 40%;
-    height: 60%;
+    height: 50%;
     background: linear-gradient(rgba(229, 222, 202, 0.9), rgba(229, 231, 203, 0.861));
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 40px;
+   
 
 
 
@@ -61,7 +65,7 @@ header {
 .search-bar {
 
     width: 100%;
-    height: 100%;
+    height: 90%;
 
     background: rgb(255, 255, 255, 0.2);
     display: flex;
@@ -79,18 +83,21 @@ header {
     flex: 1;
     border: 0;
     outline: none;
-    padding: 1%;
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: rgb(62, 59, 59);
 }
 
 ::placeholder {
     color: rgb(62, 59, 59);
+    font-size: 1rem;
+    
 }
 
 .search-bar button img {
-    width: 30px;
-    flex: 1;
+   width: 100%;
+   /* transform: translate(-25%, -25%); */
+  
+    /* flex: 1; */
 }
 
 .search-bar button {
@@ -109,16 +116,62 @@ header {
 
 .form-btn:hover>.imagem-lupa-black {
     display: none;
+   
 }
 
 .form-btn:hover>.imagem-lupa-azul {
     display: block;
+    
+    
+}
+#icone-menu{
+    display: none;
+}
+#expand{
+    display: none;
+    text-align: center;
+    width: 100%;
+    height: 2vw;
+  
+     
+}
+#expand > img{
+    display: none;
+    height: 100%; 
+     
 }
 
 
-main {
+
+.dropdown{
+    display: none;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 1vh 2vw;
+    gap: 4vw;
+    font-size: clamp(1rem, 3vw , 2rem)
+    
+}
+
+
+#icone-expand-less{
+    width: 100%;
+    height: 2vh;
+    text-align: center;
+}
+
+
+
+
+#escrita{
+    margin-top: 1vh;
+    margin-left: 2vw;
+}
+
+#main {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     background-color: var(--cor-main-background);
     justify-content: center;
     align-items: center;
@@ -131,34 +184,40 @@ main {
 .receita {
     display: grid;
     grid-template-columns: 30% 1fr;
-    grid-template-rows: 8vh 3fr 2fr;
+    grid-template-rows: 8vh auto 2fr;
     width: 80%;
     margin: 2vw;
+    border-radius: 8px;
+    font-size: 2vw;
 
 
 
-    box-shadow: 2px 5px 10px black;
+    box-shadow: 1px 2px 5px gray;
 
     background: rgb(230, 218, 198);
-    background: linear-gradient(0deg, rgba(230, 218, 198, 1) 0%, rgba(228, 170, 139, 1) 100%);
+    background: linear-gradient(0deg, rgb(240, 161, 119) 0%, rgb(243, 139, 84) 100%);
 
+
+    
     /* ***************************************** */
 }
 
 .nome-da-receita {
+    margin-top: 4vh;
 
     grid-row: 1;
     grid-column: 1 / -1;
     justify-self: center;
     align-self: center;
-    font-size: 1.5rem;
-    color: #3a331e;
+    font-size: clamp(2vw, 2vw,4px);
+    color: #141108;
+    text-align: center;
 
 }
 
 .receitalink:link,
 .receitalink:visited {
-    color: #3a331e;
+    color: #141108;
     text-decoration: none
 }
 
@@ -184,8 +243,8 @@ main {
 
 .imagem {
     align-self: center;
-    width: 20vw;
-    height: 20vw;
+    width: 100%;
+   
     border-radius: 50%;
 
 }
@@ -193,7 +252,7 @@ main {
 .tabela {
     text-align: center;
     margin-left: 1vw;
-    color: #3a331e;
+    color: #141108;
 
 
 }
@@ -242,7 +301,7 @@ main {
     border-bottom: 1px solid black;
     align-self: flex-end;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: #3a331e;
 
 
@@ -257,6 +316,7 @@ main {
 /* ***************************MODO DE PREPARO************ */
 
 .modo-preparo {
+    /* display: none; */
     grid-row: 3;
     grid-column: 1 / -1;
     /* border: 1px solid black; */
@@ -267,11 +327,12 @@ main {
 
 }
 
+
 .titulo-modo {
     margin-bottom: 2vh;
     text-align: center;
     border-bottom: 1px solid black;
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: #3a331e;
 
 }
@@ -296,7 +357,13 @@ footer {
     text-align: center;
 }
 
-#links-contato {}
+#links-contato > a > img{
+    height: 8vh;
+}
+#links-contato > a :hover{
+   scale: 1.25;
+   transition: 0.5s;
+}
 
 /*************************************************************************
 ************************************************************************
@@ -314,13 +381,14 @@ footer {
     }
 
     header {
-        font-size: 1rem;
+        font-size: clamp(1.5rem, 4vw, 2rem);
         flex-wrap: wrap;
     }
 
     header h1 {
         text-align: center;
         width: 80%;
+         font-size: clamp(1rem, 4vw, 2rem);
 
     }
 
@@ -336,12 +404,18 @@ footer {
     }
 
     .search-bar button img {
-        width: 20px;
+        width: 100%;
+        /* transform: translate(75%, 0); */
     }
 
     .search-bar button {
-        width: 20px;
-        height: 20px;
+        width: 10%;
+        height: 100%;
+    }
+    #expand > img{
+        display: none;
+      
+         
     }
 
 
@@ -349,7 +423,7 @@ footer {
 .receita {
     
     grid-template-columns: 1fr;
-    grid-template-rows: 8vh 30vw 1.5fr 2fr ;
+    grid-template-rows: 8vh 30vw auto 2fr ;
     width: 80%;
     margin: 2vw;
 
@@ -358,6 +432,7 @@ footer {
 }
 
 .nome-da-receita {
+    margin-top: 2vh;
     font-size: 1rem;
 }
 
@@ -393,14 +468,12 @@ footer {
 }
 
 .tabela>.tabela-info{
-    /* justify-items: center; */
+   
     justify-content: center; 
-    /* width: 100%; */
+   
     
 }
-.tabela-info{
-    /* width: 100%; */
-}
+
 
 
 
@@ -410,14 +483,14 @@ footer {
     grid-row: 3;
     grid-column: 1 / -1;
     margin-top: 1vw;
+    padding: 4vw;
 }
 
-.titulo-ingredientes {
-    font-size: 1.2rem;
-}
+
 
 .ingrediente {
     width: 100%;
+
 }
 
 
@@ -432,11 +505,7 @@ footer {
 
 }
 
-.titulo-modo {
-   
-    font-size: 1.2rem;
 
-}
 
 /* **************************FOOTER********************** */
 
@@ -454,4 +523,3 @@ footer {
     
     
 }
-

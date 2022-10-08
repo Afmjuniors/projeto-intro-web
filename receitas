@@ -1,0 +1,490 @@
+receita4 = {
+    nomeDoPrato: "Bobó de camarão",
+    tempoDePreparo: 60,
+    porcoes: 6,
+    tipo: "Frutos do Mar",
+    jaFez: true,
+    ingredientes: [
+        {
+            nomeDoingrediente: "Camarão fresco",
+            quantidade: 1,
+            medida: "Kg"
+        },
+        {
+            nomeDoingrediente: "Sal",
+            quantidade: '',
+            medida: "A gosto"
+        },
+        {
+            nomeDoingrediente: 'Limão',
+            quantidade: '1',
+            medida: "suco"
+        },
+        {
+            nomeDoingrediente: "Pimenta-do-reino",
+            quantidade: '',
+            medida: "A gosto"
+        },
+        {
+            nomeDoingrediente: "Madioca",
+            quantidade: '1',
+            medida: "Kg"
+        },
+        {
+            nomeDoingrediente: "louro",
+            quantidade: '1',
+            medida: "folha"
+        },
+        {
+            nomeDoingrediente: 'Cebolas',
+            quantidade: '3',
+            medida: "Und"
+        },
+        {
+            nomeDoingrediente: "Azeite de Oliva",
+            quantidade: '6',
+            medida: "colheres de sopa"
+        },
+        {
+            nomeDoingrediente: "leite de coco",
+            quantidade: '2',
+            medida: "vidros"
+        },
+        {
+            nomeDoingrediente: "Cheiro-verde picado",
+            quantidade: '1',
+            medida: "maço"
+        },
+        {
+            nomeDoingrediente: "Molho pronto de tomate ",
+            quantidade: '2',
+            medida: "Latas"
+        },
+        {
+            nomeDoingrediente: "Pimentões verdes bem picadinhos",
+            quantidade: '2',
+            medida: "Und"
+        },
+        {
+            nomeDoingrediente: "Azeite de dendê",
+            quantidade: '2',
+            medida: "Colheres de sopa"
+        },
+    ],
+    modoDePreparo: ['Lave os camarões e tempere com sal, alho, pimenta e limão, deixe marinar.',
+        'Pegue uma panela com água e cozinhe a mandioca em pedacinhos, com louro e a cebola em rodelas.',        
+        'Quando estiver mole, acrescente um vidro de leite de coco.',        
+       ' Deixe esfriar um pouco e bata no liquidificador.',        
+        'Esquente o azeite de oliva, junte a cebola ralada e deixe dourar.',        
+        'Acrescente os camarões e frite.',        
+        'Adicione as 2 latas de pomarola, o cheiro-verde, o pimentão e deixe cozinhar por alguns minutos.',        
+        'Junte na mesma panela, a mandioca batida no liquidificador, outro vidro de leite de coco e o azeite de dendê.',
+        'Deixe levantar fervura e está pronto.'],
+
+    linkImagem: './assets/bobo-de-camarao.png',
+};
+
+receita5 = {
+    nomeDoPrato: "Risoto de camarão",
+    tempoDePreparo: 50,
+    porcoes: 4,
+    tipo: "Frutos do Mar",
+    jaFez: true,
+    ingredientes: [
+        {
+            nomeDoingrediente: "Camarão cinza limpo",
+            quantidade: 400,
+            medida: "g"
+        },
+        {
+            nomeDoingrediente: "Arroz Branco",
+            quantidade: '3',
+            medida: "Xicaras"
+        },
+        {
+            nomeDoingrediente: 'Caldo de Camarão',
+            quantidade: '1',
+            medida: "Cubo"
+        },
+        {
+            nomeDoingrediente: "Pimentão verde cortado em cubos pequenos",
+            quantidade: '1/2',
+            medida: "Xicara"
+        },
+        {
+            nomeDoingrediente: "Tomate sem semente cortado em cubos pequenos",
+            quantidade: '1',
+            medida: "Und"
+        },
+        {
+            nomeDoingrediente: "Cheiro-verde picado",
+            quantidade: '',
+            medida: "A gosto"
+        },
+        {
+            nomeDoingrediente: 'Extrato de tomate',
+            quantidade: '2',
+            medida: "Colheres de sopa"
+        },
+        {
+            nomeDoingrediente: "Alho",
+            quantidade: '2',
+            medida: "Dentes"
+        },
+        {
+            nomeDoingrediente: "Azeite",
+            quantidade: '1',
+            medida: "Colher de sopa"
+        },
+        {
+            nomeDoingrediente: "Sal",
+            quantidade: '',
+            medida: "A gosto"
+        },
+        {
+            nomeDoingrediente: "Limão",
+            quantidade: '1/2',
+            medida: "Und."
+        },
+    ],
+    modoDePreparo: ['Tempere o camarão com limão e sal, reserve por 10 minutos.',
+        'Enquanto isso, faça o arroz, fritando-o muito bem.',        
+       ' Em seguida, coloque água em uma panela, o suficiente para cobrir o arroz (sobrando uns 2 centímetros a mais do que o arroz no fundo da panela).',        
+        'Coloque pouco sal, pois o molho do camarão levará o cubo de caldo de camarão.',
+        'Cozinhe em fogo baixo até que toda água seque.',        
+        'Retire do fogo e deixe a tampa da panela aberta (para o arroz não passar do ponto).',        
+        'E uma frigideira grande, que caiba todo o camarão, doure o alho e coloque todo o camarão sem o suco do limão.',        
+        'Junte o tomate, o pimentão, o cheiro-verde, o extrato de tomate e o cubo de caldo de camarão.',        
+        'Adicione um pouco de água, para que tenha molho suficiente para encobrir o camarão na frigideira. Cozinhe em fogo baixo por 5 minutos.',        
+        'Enquanto isso, retire o arroz e coloque-o em um recipiente de cerâmica ou vidro, solte-o bastante com o garfo.',       
+        'Junte o molho do camarão e misture, usando em uma das mãos um garfo, e em outra mão uma colher.',        
+        'Decore com camarões grelhados e coentro, sirva bem quente!'],
+
+    linkImagem: './assets/risoto-de-camarao.png',
+};
+receita6 = {
+    nomeDoPrato: "Pavê de morango com chocolate",
+    tempoDePreparo: 40,
+    porcoes: 0,
+    tipo: "Doces",
+    jaFez: true,
+    ingredientes: [
+        {
+            nomeDoingrediente: "Bolacha maisena",
+            quantidade: 1,
+            medida: "Pacote"
+        },
+        {
+            nomeDoingrediente: "Leite condensado",
+            quantidade: '1',
+            medida: "Lata"
+        },
+        {
+            nomeDoingrediente: 'Leite',
+            quantidade: '1',
+            medida: "Lata"
+        },
+        {
+            nomeDoingrediente: "Gemas",
+            quantidade: '2',
+            medida: "Und"
+        },
+        {
+            nomeDoingrediente: "Farinha de trigo",
+            quantidade: '1',
+            medida: "Colher de sopa"
+        },
+        {
+            nomeDoingrediente: "Morango",
+            quantidade: '2',
+            medida: "Xicaras"
+        },
+        {
+            nomeDoingrediente: 'Extrato de baunilha',
+            quantidade: '1',
+            medida: "Colheres de chá"
+        },
+        {
+            nomeDoingrediente: "Chocolate meio amargo",
+            quantidade: '100',
+            medida: "g"
+        },
+        {
+            nomeDoingrediente: "Chantilly",
+            quantidade: '1',
+            medida: "Xicara"
+        },
+       
+    ],
+    modoDePreparo: ['Numa panela, coloque o leite condensado, o leite (reserve um pouco), as gemas levemente batidas, a baunilha e a farinha misturada no leite reservado.',
+        'Mexa até engrossar.',        
+        'Desligue e junte o creme de leite com o soro.',        
+       ' Divida o creme obtido igualmente em dois refratários.',        
+        '1º Creme:',        
+        'No primeiro refratário, junte o chocolate raspado com o creme ainda quente. Mexa até derreter totalmente. Acrescente 1 xícara (chá) de morango picados. Misture e reserve.',        
+        '2º Creme:',        
+        'No segundo refratário, junte ao creme chantilly e 1 xícara de (chá) de morangos picados. Misture e reserve.',        
+        'Montagem:',        
+       ' Num refratário, coloque na seguinte ordem: o segundo creme, as bolachas, o creme de chocolate (primeiro creme), bolachas, o segundo creme e o primeiro creme.',        
+        'Por fim, coloque chantilly no saco de confeitar (bico pitanga médio) e decore. Espalhe sobre o pavê.'],
+    linkImagem: './assets/pave-de-morango-chocolate.png',
+};
+receita7 = {
+    nomeDoPrato: "Yakissoba da casa",
+    tempoDePreparo: 40,
+    porcoes: 4,
+    tipo: "Massas",
+    jaFez: true,
+    ingredientes: [
+        {
+            nomeDoingrediente: "Espaguete",
+            quantidade: 300,
+            medida: "g"
+        },
+        {
+            nomeDoingrediente: "Cebola grande cortada em pedaços médios",
+            quantidade: '1',
+            medida: "Und"
+        },
+        {
+            nomeDoingrediente: 'Óleo',
+            quantidade: '1',
+            medida: "Colher de sopa"
+        },
+        {
+            nomeDoingrediente: "Brócolis",
+            quantidade: '1/2',
+            medida: "Maço"
+        },
+        {
+            nomeDoingrediente: "Couve-flor",
+            quantidade: '1/2',
+            medida: "Maço"
+        },
+        {
+            nomeDoingrediente: "Molho shoyu",
+            quantidade: '10',
+            medida: "Colheres de sopa"
+        },
+        {
+            nomeDoingrediente: 'Carne cortada em tiras',
+            quantidade: '400',
+            medida: "g"
+        },
+        {
+            nomeDoingrediente: "Champignon",
+            quantidade: '100',
+            medida: "g"
+        },
+        {
+            nomeDoingrediente: "Cenoura cortada em rodelas",
+            quantidade: '1',
+            medida: "Und"
+        },
+        {
+            nomeDoingrediente: "Água",
+            quantidade: '250',
+            medida: "ml"
+        },
+        {
+            nomeDoingrediente: "Amido de milho, dissolvido em 50 ml de água",
+            quantidade: '1',
+            medida: "Colher de sopa"
+        },
+        {
+            nomeDoingrediente: "Acelga",
+            quantidade: '',
+            medida: "A gosto"
+        },
+    ],
+    modoDePreparo: ['Cozinhe o macarrão em ponto al dente e reserve.',
+        'Em uma panela, adicione o azeite, a cebola, a carne e refogue bem.',        
+       'Adicione o molho shoyu e cozinhe por 3 minutos em fogo médio.' ,       
+       'Acrescente mais água, aguarde levantar fervura e adicione o amido de milho.',        
+        'Mexa até engrossar, abaixe o fogo e adicione o champignon, a couve-flor, o brócolis e a cenoura.',        
+        'Cozinhe por 8 minutos e acrescente, por último, a acelga e o macarrão.',        
+        'Misture bem, acerte o sal e tampe a panela por mais 1 minuto.',        
+        'Está pronto para servir!'],
+
+    linkImagem: './assets/yakisoba.png',
+};
+receita8 = {
+    nomeDoPrato: "Ficassê de frango",
+    tempoDePreparo: 30,
+    porcoes: 4,
+    tipo: "Aves",
+    jaFez: true,
+    ingredientes: [
+        {
+            nomeDoingrediente: "Creme de leite",
+            quantidade: '1',
+            medida: "Lata"
+        },
+        {
+            nomeDoingrediente: "Milho verde",
+            quantidade: '1',
+            medida: "Lata"
+        },
+        {
+            nomeDoingrediente: 'Requeijão cremoso',
+            quantidade: '1',
+            medida: "Copo"
+        },
+        {
+            nomeDoingrediente: "Azeitona sem caroço",
+            quantidade: '100',
+            medida: "g"
+        },
+        {
+            nomeDoingrediente: "Frango desfiados",
+            quantidade: '2',
+            medida: "Peitos"
+        },
+        {
+            nomeDoingrediente: "Mussarela fatiada",
+            quantidade: '200',
+            medida: "g"
+        },
+        {
+            nomeDoingrediente: 'Batata palha',
+            quantidade: '100',
+            medida: "g"
+        },
+        {
+            nomeDoingrediente: "Água",
+            quantidade: '1',
+            medida: "Xícara"
+        },
+        {
+            nomeDoingrediente: "Sal",
+            quantidade: '',
+            medida: "A gosto"
+        },
+        
+    ],
+    modoDePreparo: ['Bata no liquidificador o milho, o requeijão, o creme de leite e a água.',
+        'Refogue o creme do liquidificador com o frango desfiado, as azeitonas e o sal até ficar com uma textura espessa.',        
+        'Coloque o refogado numa assadeira, cubra com mussarela e espalhe a batata palha por cima.',       
+        'Leve ao forno até borbulhar.',        
+        'Sirva com arroz branco.'],
+
+    linkImagem: './assets/fricasse-de-frango.png',
+};
+receita9 = {
+    nomeDoPrato: "Frango com quiabo",
+    tempoDePreparo: 20,
+    porcoes: 8,
+    tipo: "Aves",
+    jaFez: true,
+    ingredientes: [
+        {
+            nomeDoingrediente: "Frango, limpo e cortado a passarinho",
+            quantidade: 1,
+            medida: "Kg"
+        },
+        {
+            nomeDoingrediente: "Óleo",
+            quantidade: '2',
+            medida: "Colheres de sopa"
+        },
+        {
+            nomeDoingrediente: 'Cebola ralada',
+            quantidade: '1',
+            medida: "Und"
+        },
+        {
+            nomeDoingrediente: "Alho amassado",
+            quantidade: '2',
+            medida: "Dentes"
+        },
+        {
+            nomeDoingrediente: "Pimenta do reino, cheiro verde picadinho",
+            quantidade: '',
+            medida: "A gosto"
+        },
+        {
+            nomeDoingrediente: "Quiabo picado",
+            quantidade: '400',
+            medida: "g"
+        },
+        {
+            nomeDoingrediente: 'Sal',
+            quantidade: '',
+            medida: "A gosto"
+        },
+        
+    ],
+    modoDePreparo: ['Em uma panela coloque óleo e vá fritando o frango aos poucos.',
+        'Reserve.',
+       ' Na mesma panela que fritou o frango coloque alho, cebola, pimenta, sal e refogue o quiabo deixe dourar mexendo de vez em quando.',
+        'Depois que o quiabo estiver dourado junte o frango e deixe cozinhar com a panela tampada até ficarem macios.',
+        'Adicione 1 xícara de chá de água para formar caldinho depois de tudo bem cozido retire e sirva com angu.',
+        'É tudo de bom.'],
+
+    linkImagem: './assets/frango-com-quiabo.png',
+};
+
+receita10 = {
+    nomeDoPrato: "Escondidinho de carne seca",
+    tempoDePreparo: 60,
+    porcoes: 6,
+    tipo: "Carnes",
+    jaFez: true,
+    ingredientes: [
+        {
+            nomeDoingrediente: "Mandioca cozida",
+            quantidade: '1',
+            medida: "Kg"
+        },
+        {
+            nomeDoingrediente: "creme de leite com soro",
+            quantidade: '1',
+            medida: "Lata"
+        },
+        {
+            nomeDoingrediente: 'Margarina',
+            quantidade: '2',
+            medida: "Colheres de sopa"
+        },
+        {
+            nomeDoingrediente: "Carne-seca dessalgada e cozida",
+            quantidade: '1/2',
+            medida: "Kg"
+        },
+        {
+            nomeDoingrediente: "Cebola média picadinha",
+            quantidade: '1',
+            medida: "Und"
+        },
+        {
+            nomeDoingrediente: "Alho esmagados",
+            quantidade: '4',
+            medida: "Dentes"
+        },
+        {
+            nomeDoingrediente: 'Tomates sem casca e picados',
+            quantidade: '2',
+            medida: "Und"
+        },
+        {
+            nomeDoingrediente: 'Sal e pimenta',
+            quantidade: '',
+            medida: "A gosto"
+        },
+        {
+            nomeDoingrediente: 'Quijo ralado',
+            quantidade: '',
+            medida: "A gosto"
+        },
+        
+    ],
+    modoDePreparo: ['Esprema a mandioca ainda quente e leve em uma panela com a margarina e sal.',
+        'Quando estiverem bem misturados acrescente o creme de leite, misture e reserve.',
+        'Refogue a cebola e o alho em um fio de azeite.',
+        'Acrescente a carne-seca desfiada e deixe fritar um pouco.',
+        'Acrescente os tomates e deixe cozinhar até ficarem murchos e acerte o sal se achar necessário.',
+        'Em um refratário untado com azeite, coloque uma camada do purê de mandioca, a carne seca e termine com o restante do purê.',
+        'Polvilhe com queijo parmesão ralado e leve ao forno pra gratinar.'],
+
+    linkImagem: './assets/escondidinho-de-carne-seca.png',
+};
