@@ -1,0 +1,11 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+	<title>sort_by_alpha_FILL0_wght400_GRAD0_opsz48-svg</title>
+	<defs>
+		<image  width="48" height="48" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwAQMAAABtzGvEAAAAAXNSR0IB2cksfwAAAAZQTFRFAAAAIrwNqG+2SAAAAAJ0Uk5TAP9bkSK1AAAAIElEQVR4nGNgGAXoQP4HmOL/AKbYH4Ap5gNgirEBv14Ays4EQvhCfjkAAAAASUVORK5CYII="/>
+	</defs>
+	<style>
+		.s0 { fill: #000000 } 
+	</style>
+	<path id="Layer" fill-rule="evenodd" class="s0" d="m4 34l8.1-20h3.2l8 20h-3.1l-1.9-4.9h-9.2l-2 4.9zm6.1-7.6h7.2l-3.5-9.2h-0.2zm17.3 7.5v-3.1l11.7-14.3h-10.8l0.1-2.6h13.5v3.2l-11.5 14.2h11.7v2.7zm-8.2-25.3l4.8-4.7 4.8 4.8zm4.8 35.2l-4.8-4.8h9.6z"/>
+	<use id="Camada 2" href="#img1" x="0" y="0"/>
+</svg>
