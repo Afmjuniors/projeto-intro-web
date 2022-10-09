@@ -18,39 +18,43 @@
            
             <div class="form-conateiner">
                 <form class="search-bar" action="#">
+                    <select name="lugar" id="select" onclick="input(event)">
+                        <option value="todos">Todos</option>
+                        <option value="Aves">Aves</option>
+                        <option value="Carnes">Carnes</option>
+                        <option value="Doces">Doces</option>
+                        <option value="Mar">Frutos do Mar</option>
+                        <option value="Massas">Massas</option>
+                        <option value="Molho">Molho</option>
+                        
+                        
+                        
+                    </select>
+
+
                     <label for="receita-procurada"></label>
-                    <input id="inputPesquisa" type="text" name="recceita-procurada" placeholder="Pesquisar...">
+                    <input id="inputPesquisa" type="text" name="recceita-procurada" placeholder="Pesquisar..."   onkeyup=input(event) >
 
 
-                    <button id="btn" class="form-btn" type="submit" onclick="input(event)">
+                    <!-- <button id="btn" class="form-btn" type="submit" onclick="input(event)">
                         <img class="imagem-lupa-black" src="./assets/Icones/lupa-50-b.png">
                         <img class="imagem-lupa-azul" src="./assets/Icones/lupa-50-a.png">
-                    </button>
+                    </button> -->
 
                 </form>
             </div>
-             <div id='expand'>
-                <img src="./assets/Icones/expand.svg">
-            </div>
+          
 
 
         </header>
         <main>
-            <nav class="dropdown">
-                <img id="icone-menu" src="./assets/Icones/menu.svg">
-                <p>Frutos do mar</p>
-                <p>Molhos</p>
-                <p>Doces</p>
-                <p>Massas</p>
-                <p>Aves</p>
-                <p>Carnes</p>
-                <p>Lista</p>
-                <div id="icone-expand-less">
-                    <img src="./assets/Icones/expand-less.svg">
-                </div>
-            </nav>
+         
 
-            <article id="escrita"></article>
+            <article id="escrita">
+
+
+            </article>
+           
             <div id="main">
 
             </div>
