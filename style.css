@@ -11,6 +11,7 @@
     --cor-card-inferior: rgb(230, 218, 198);
     --cor-footer-background: #b37883;
      font-size:   2vw;
+     scroll-behavior: smooth;
 
 }
 
@@ -39,7 +40,7 @@ header {
     color: black;
     height: 60%;
     text-decoration: none;
-    font-size: clamp(1rem, 4vw, 2rem);
+    font-size: clamp(3rem, 4vw, 7rem);
  
 }
 
@@ -82,7 +83,7 @@ header {
     background: #f5e4c6;
     border: 0;
     height: 100%;
-    font-size: 0.75rem;
+    font-size: clamp(0.5rem, 1.75vw, 2rem);
     border-bottom-left-radius: 30px;
     border-top-left-radius: 30px;
     text-align: center;
@@ -95,14 +96,14 @@ header {
     flex: 1;
     border: 0;
     outline: none;
-    font-size: 1rem;
+    font-size: clamp(0.625rem, 2vw, 3rem);
     margin-left: 0.5vw;
     color: rgb(62, 59, 59);
 }
 
 ::placeholder {
     color: rgb(62, 59, 59);
-    font-size: 1rem;
+    font-size: clamp(0.625rem, 2vw, 3rem);
     
 }
 
@@ -148,6 +149,27 @@ header {
     margin-top: 1vh;
     margin-left: 2vw;
    
+}
+.scroller{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    margin: 4vh auto;
+    height: 20vh;
+    width: 75vw;
+    max-width: 1000px;
+}
+#image-container{
+    display: flex;
+    gap: 24px;
+    padding: 1.5vw;
+    /* margin: auto 2vw; */
+    overflow-x: auto;
+   
+}
+#image-container img{
+  
+    border-radius: 25%;
+    
+    height: 15vh;
 }
 
 
@@ -260,6 +282,7 @@ header {
 .tabela>ul>li {
     list-style-type: none;
     padding-top: 1vh;
+    color: black;
     border: 0.063em solid black;
 
 }
@@ -290,7 +313,7 @@ header {
     align-self: flex-end;
     text-align: center;
     font-size: 1rem;
-    color: #3a331e;
+    color: #141108;
 
 
 }
@@ -321,7 +344,7 @@ header {
     text-align: center;
     border-bottom: 1px solid black;
     font-size: 1rem;
-    color: #3a331e;
+    color: #141108;
 
 }
 
@@ -369,16 +392,26 @@ footer {
     }
 
     header {
-        font-size: clamp(1.5rem, 4vw, 2rem);
+        
         flex-wrap: wrap;
     }
 
     header h1 {
         text-align: center;
         width: 80%;
-         font-size: clamp(1rem, 4vw, 2rem);
+      
 
     }
+    #titulo a,
+#titulo:hover,
+#titulo:link,
+#titulo:visited {
+    color: black;
+    height: 60%;
+    text-decoration: none;
+    font-size: clamp(4rem, 4vw, 8rem);
+ 
+}
 
     .form-conateiner {
         width: 50%;
@@ -387,8 +420,11 @@ footer {
 
 
     .search-bar input {
-        font-size: 1rem;
+        font-size: clamp(1rem, 4vw, 6rem);
 
+    }
+    ::placeholder{
+        font-size: clamp(1rem, 4vw, 6rem);
     }
 
     .search-bar button img {
