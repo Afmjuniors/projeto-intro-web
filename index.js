@@ -676,7 +676,6 @@ todasAsReceitas.push(receita10)
 
 
 
-
 const procuraDropDown = []
 let receitaProcurada = [...todasAsReceitas]
 for (let nome of todasAsReceitas) {
@@ -698,12 +697,23 @@ function impressao() {
 
     for (let index in receitaProcurada) {
 
-
+        const criandoImageScroller = document.createElement('img')
+        const divScroller = document.getElementById('image-container')
+        // <a href="#contato">
+        const criandoLink = document.createElement('a')
+        criandoLink.setAttribute('href',`#${receitaProcurada[index].nomeDoPrato}`)
+        criandoLink.setAttribute('class','ancoraImagem')
+        
+        criandoImageScroller.setAttribute('class', 'imagemScroller')
+        criandoImageScroller.setAttribute('src', receitaProcurada[index].linkImagem)
+        divScroller.insertAdjacentElement('beforeend',criandoLink)
+        criandoLink.insertAdjacentElement('beforeend',criandoImageScroller)
 
         /*************************************DIV NOME_DA_RECEITA */
 
         const criandoASecao = document.createElement('section')
         criandoASecao.setAttribute('class', 'receita')
+        criandoASecao.setAttribute('id', receitaProcurada[index].nomeDoPrato)
 
         const referenciabase = document.getElementById('main')
         referenciabase.insertAdjacentElement('afterbegin', criandoASecao)
@@ -839,8 +849,8 @@ function impressao() {
 
 
 
-  
-    
+
+
 
 
 
@@ -849,75 +859,119 @@ function impressao() {
 
 
 function input(event) {
-    let baseselecao= [...todasAsReceitas]
-const selectBar = seletor.selectedIndex
-    
-switch (selectBar) {
-    case 0:
-        baseselecao= [...todasAsReceitas]
+    let baseselecao = [...todasAsReceitas]
+    const selectBar = seletor.selectedIndex
 
-        break;
-    case 1:
-        baseselecao= todasAsReceitas.filter((valor)=>valor.tipo==='Aves')
+    switch (selectBar) {
+        case 0:
+            baseselecao = [...todasAsReceitas]
 
-        break;
-    case 2:
-        baseselecao= todasAsReceitas.filter((valor)=>valor.tipo==='Carnes')
- 
-        break;
+            break;
+        case 1:
+            baseselecao = todasAsReceitas.filter((valor) => valor.tipo === 'Aves')
+
+            break;
+        case 2:
+            baseselecao = todasAsReceitas.filter((valor) => valor.tipo === 'Carnes')
+
+            break;
         case 3:
-            baseselecao= todasAsReceitas.filter((valor)=>valor.tipo==='Doces')
- 
-        break;
+            baseselecao = todasAsReceitas.filter((valor) => valor.tipo === 'Doces')
+
+            break;
         case 4:
-            baseselecao= todasAsReceitas.filter((valor)=>valor.tipo==='Frutos do Mar')
- 
-        break;
+            baseselecao = todasAsReceitas.filter((valor) => valor.tipo === 'Frutos do Mar')
+
+            break;
         case 5:
-            baseselecao= todasAsReceitas.filter((valor)=>valor.tipo==='Massas')
- 
-        break;
+            baseselecao = todasAsReceitas.filter((valor) => valor.tipo === 'Massas')
+
+            break;
         case 6:
-            baseselecao= todasAsReceitas.filter((valor)=>valor.tipo==='Molho')
- 
-        break;
-    default:
-        console.log('nao deu');
-        break;
-}
+            baseselecao = todasAsReceitas.filter((valor) => valor.tipo === 'Molho')
+
+            break;
+        default:
+            console.log('nao deu');
+            break;
+    }
+
+
 
     cont = 0
-            const tamanho = receitaProcurada.length
-            receitaProcurada = []
-            const secoesParaDestuir = document.getElementsByClassName('receita')
-            for (let i = 0; i < tamanho; i++) {
-                secoesParaDestuir[0].remove()
-            }
-        
-            for (let j in baseselecao) {
-        
-                baseselecao[j].jaFez = false
-            }      
-        
-            const novaInputTexto = inputDaPesquisa.value;
-        
-            const palavras = inputDaPesquisa.value.split(' ')
-          
-   
+    const tamanho = receitaProcurada.length
+    receitaProcurada = []
+    const secoesParaDestuir = document.getElementsByClassName('receita')
+    const imagensParadestruir =document.getElementsByClassName('ancoraImagem')
+    for (let i = 0; i < tamanho; i++) {
+        secoesParaDestuir[0].remove()
+        imagensParadestruir[0].remove()
+    }
+
+    for (let j in baseselecao) {
+
+        baseselecao[j].jaFez = false
+    }
+
+    const novaInputTexto = inputDaPesquisa.value.trim();
+
+    const palavras = novaInputTexto.split(' ')
+    let frase = ''
+
     if (palavras[0].length > 1) {
-        
-        for (let word of palavras) {
 
-            word = word.toLowerCase().replace('ã', 'a').replace('ç', 'c').replace('á', 'a').replace('à', 'a').replace('é', 'e').replace('ó', 'o').replace('ò', 'o').replace('ê', 'e')
-            word = testeDicionario(word)
+        if (palavras.length === 1) {
+            for (let word of palavras) {
 
-           
+                word = word.toLowerCase().replace('ã', 'a').replace('ç', 'c').replace('á', 'a').replace('à', 'a').replace('é', 'e').replace('ó', 'o').replace('ò', 'o').replace('ê', 'e')
+                word = testeDicionario(word)
+
+
+
                 receitaProcurada = baseselecao.filter((valor) => {
                     const nome = valor.nomeDoPrato.toLowerCase().replace('ã', 'a').replace('ç', 'c').replace('á', 'a').replace('à', 'a').replace('é', 'e').replace('ó', 'o').replace('ò', 'o').replace('ê', 'e')
                     return nome.includes(word)
                 })
+            }
 
-            
+
+
+
+        } else {
+            console.log("entrou else");
+
+
+            if (palavras[1].length > 2) {
+                {
+                    console.log("entrou if");
+                    word = novaInputTexto.toLowerCase().replace('ã', 'a').replace('ç', 'c').replace('á', 'a').replace('à', 'a').replace('é', 'e').replace('ó', 'o').replace('ò', 'o').replace('ê', 'e')
+                    word = testeDicionario(word)
+                    console.log(word);
+
+
+
+
+                    receitaProcurada = baseselecao.filter((valor) => {
+                        const nome = valor.nomeDoPrato.toLowerCase().replace('ã', 'a').replace('ç', 'c').replace('á', 'a').replace('à', 'a').replace('é', 'e').replace('ó', 'o').replace('ò', 'o').replace('ê', 'e')
+                        console.log(nome);
+                        return nome.includes(word)
+                    })
+                }
+
+            }else{
+                     word = novaInputTexto.toLowerCase().replace('ã', 'a').replace('ç', 'c').replace('á', 'a').replace('à', 'a').replace('é', 'e').replace('ó', 'o').replace('ò', 'o').replace('ê', 'e')
+                    console.log(word);
+                     receitaProcurada = baseselecao.filter((valor) => {
+                    const nome = valor.nomeDoPrato.toLowerCase().replace('ã', 'a').replace('ç', 'c').replace('á', 'a').replace('à', 'a').replace('é', 'e').replace('ó', 'o').replace('ò', 'o').replace('ê', 'e')
+                    return nome.includes(word)
+                })
+
+            }
+
+
+
+
+
 
         }
 
