@@ -693,6 +693,7 @@ impressao()
 
 
 
+
 function impressao() {
 
     for (let index in receitaProcurada) {
@@ -701,13 +702,13 @@ function impressao() {
         const divScroller = document.getElementById('image-container')
         // <a href="#contato">
         const criandoLink = document.createElement('a')
-        criandoLink.setAttribute('href',`#${receitaProcurada[index].nomeDoPrato}`)
-        criandoLink.setAttribute('class','ancoraImagem')
-        
+        criandoLink.setAttribute('href', `#${receitaProcurada[index].nomeDoPrato}`)
+        criandoLink.setAttribute('class', 'ancoraImagem')
+
         criandoImageScroller.setAttribute('class', 'imagemScroller')
         criandoImageScroller.setAttribute('src', receitaProcurada[index].linkImagem)
-        divScroller.insertAdjacentElement('beforeend',criandoLink)
-        criandoLink.insertAdjacentElement('beforeend',criandoImageScroller)
+        divScroller.insertAdjacentElement('beforeend', criandoLink)
+        criandoLink.insertAdjacentElement('beforeend', criandoImageScroller)
 
         /*************************************DIV NOME_DA_RECEITA */
 
@@ -857,7 +858,6 @@ function impressao() {
 
 
 
-
 function input(event) {
     let baseselecao = [...todasAsReceitas]
     const selectBar = seletor.selectedIndex
@@ -902,7 +902,7 @@ function input(event) {
     const tamanho = receitaProcurada.length
     receitaProcurada = []
     const secoesParaDestuir = document.getElementsByClassName('receita')
-    const imagensParadestruir =document.getElementsByClassName('ancoraImagem')
+    const imagensParadestruir = document.getElementsByClassName('ancoraImagem')
     for (let i = 0; i < tamanho; i++) {
         secoesParaDestuir[0].remove()
         imagensParadestruir[0].remove()
@@ -913,10 +913,11 @@ function input(event) {
         baseselecao[j].jaFez = false
     }
 
-    const novaInputTexto = inputDaPesquisa.value.trim();
+    let novaInputTexto = inputDaPesquisa.value.trim();
 
     const palavras = novaInputTexto.split(' ')
     let frase = ''
+
 
     if (palavras[0].length > 1) {
 
@@ -958,10 +959,10 @@ function input(event) {
                     })
                 }
 
-            }else{
-                     word = novaInputTexto.toLowerCase().replace('ã', 'a').replace('ç', 'c').replace('á', 'a').replace('à', 'a').replace('é', 'e').replace('ó', 'o').replace('ò', 'o').replace('ê', 'e')
-                    console.log(word);
-                     receitaProcurada = baseselecao.filter((valor) => {
+            } else {
+                word = novaInputTexto.toLowerCase().replace('ã', 'a').replace('ç', 'c').replace('á', 'a').replace('à', 'a').replace('é', 'e').replace('ó', 'o').replace('ò', 'o').replace('ê', 'e')
+                console.log(word);
+                receitaProcurada = baseselecao.filter((valor) => {
                     const nome = valor.nomeDoPrato.toLowerCase().replace('ã', 'a').replace('ç', 'c').replace('á', 'a').replace('à', 'a').replace('é', 'e').replace('ó', 'o').replace('ò', 'o').replace('ê', 'e')
                     return nome.includes(word)
                 })
@@ -1001,6 +1002,8 @@ function input(event) {
     impressao();
 
 }
+
+
 
 
 

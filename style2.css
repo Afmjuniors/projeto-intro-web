@@ -1,0 +1,21 @@
+
+
+
+header{
+    height: 20vh;
+}
+.titulo > img{
+    height: 100%;
+  margin-top: 3vw;
+}
+
+footer{
+    height: 80vh;
+}
+#links-contato > a > img{
+    height: 12vh;
+}
+#links-contato > a :hover{
+   scale: 1.25;
+   transition: 0.5s;
+}
