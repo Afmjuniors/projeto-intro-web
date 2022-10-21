@@ -677,11 +677,54 @@ todasAsReceitas.push(receita10)
 
 
 const procuraDropDown = []
-let receitaProcurada = [...todasAsReceitas]
+let receitaProcurada = []
 for (let nome of todasAsReceitas) {
     procuraDropDown.push(nome.nomeDoPrato)
 }
-procuraDropDown.sort((a, b) => a.toLowerCase() < b.toLowerCase() ? -1 : 1)
+procuraDropDown.sort((a, b) => a.toLowerCase() < b.toLowerCase() ? 1 : -1)
+
+for(let i of procuraDropDown)
+{
+    for(let n of todasAsReceitas)
+    {
+        if(n.nomeDoPrato === i)
+        {
+            receitaProcurada.push(n)
+        }
+    }
+    
+
+}
+
+
+function relatorio(){
+    let tamanho = 0;
+    for(let rec of todasAsReceitas){
+        console.log(`Nome do Pra: ${rec.nomeDoPrato}
+        Tempo de preparo:${rec.tempoDePreparo}minutos
+        Porções:${rec.porcoes}
+        Tipo:${rec.tipo}
+        Numero de Ingredientes:${rec.ingredientes.length}`)
+        for(let ingr in rec.ingredientes){
+            console.log(rec.ingredientes[ingr].quantidade+" "+rec.ingredientes[ingr].medida+" de "+rec.ingredientes[ingr].nomeDoingrediente)
+        }
+        console.log(`Modo de Preparo:${rec.modoDePreparo.join()}`)
+        
+        tamanho+=rec.ingredientes.length
+    }
+    console.log(tamanho/(todasAsReceitas.length)+' Ingredientes por receita')
+    for(let rec of todasAsReceitas){
+        if(rec.jaFez)
+        {
+            console.log(rec.nomeDoPrato+" ja foi feito - "+rec.jaFez)
+        }
+    }
+}
+    
+
+    
+
+
 
 
 
@@ -714,7 +757,7 @@ function impressao() {
 
         const criandoASecao = document.createElement('section')
         criandoASecao.setAttribute('class', 'receita')
-        criandoASecao.setAttribute('id', receitaProcurada[index].nomeDoPrato)
+        criandoASecao.setAttribute('id', receitaProcurada[index].nomeDoPrato.toUpperCase())
 
         const referenciabase = document.getElementById('main')
         referenciabase.insertAdjacentElement('afterbegin', criandoASecao)
@@ -842,6 +885,8 @@ function impressao() {
             elementoDeReferenciaModoDePreparo[0].insertAdjacentElement('beforeend', novaLinhaModoPreparo)
         }
     }
+
+relatorio();
 
 }
 

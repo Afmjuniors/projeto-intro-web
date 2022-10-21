@@ -27,7 +27,7 @@ header {
     align-items: center;
 
 
-    font-size: 1rem;
+    /* font-size: 1rem; */
     background-color: var(--cor-header-background);
     box-shadow: 1px 2px 5px gray;
    
@@ -37,10 +37,9 @@ header {
 .titulo:hover,
 .titulo:link,
 .titulo:visited {
-    color: black;
+
     height: 100%;
-    text-decoration: none;
-    font-size: clamp(3rem, 4vw, 7rem);
+
  
 }
 .titulo > img{
@@ -58,6 +57,7 @@ header {
 
 #login{
     width: 10%;
+    max-height: 100%;
 }
 
 
@@ -386,6 +386,7 @@ footer {
     text-align: center;
 }
 
+
 #links-contato > a > img{
     height: 8vh;
 }
@@ -464,6 +465,13 @@ footer {
         display: none;
       
          
+    }
+    #image-container img{
+  
+        border-radius: 25%;
+        /* box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px; */
+        
+        height: 15vw;
     }
 
 
@@ -562,5 +570,8 @@ footer {
     display: flex;
 }
 
-}
 
+#links-contato > a > img{
+    height: 8vw;
+}
+}
