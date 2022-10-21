@@ -6,8 +6,8 @@
 
 :root {
     --cor-main-background: rgb(229, 231, 203);
-    --cor-header-background: rgb(194, 180, 138);
-    --cor-card-superior: rgb(228, 170, 139);
+    --cor-header-background:rgb(255, 145, 77);
+    --cor-card-superior: rgb(255, 255, 255);
     --cor-card-inferior: rgb(230, 218, 198);
     --cor-footer-background: #b37883;
      font-size:   2vw;
@@ -26,22 +26,38 @@ header {
     justify-content: space-around;
     align-items: center;
 
-    flex-wrap: wrap;
-    font-size: 2vw;
+
+    font-size: 1rem;
     background-color: var(--cor-header-background);
     box-shadow: 1px 2px 5px gray;
    
 }
 
-#titulo a,
-#titulo:hover,
-#titulo:link,
-#titulo:visited {
+.titulo a,
+.titulo:hover,
+.titulo:link,
+.titulo:visited {
     color: black;
-    height: 60%;
+    height: 100%;
     text-decoration: none;
     font-size: clamp(3rem, 4vw, 7rem);
  
+}
+.titulo > img{
+    height: 100%;
+  margin-top: 2vh;
+  
+}
+#logo img{
+    height: 100%;
+    margin-top: 0;
+    
+}
+
+
+
+#login{
+    width: 10%;
 }
 
 
@@ -51,13 +67,12 @@ header {
     min-height: 2vw;
     max-height: 7vw;
     max-width: 700px;
-    width: 40%;
-    height: 50%;
-    background: linear-gradient(rgba(229, 222, 202, 0.9), rgba(229, 231, 203, 0.861));
+    width: 25%;
+    height: 1.3rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 40px;
+    border-radius: 1vh;
    
 
 
@@ -70,10 +85,10 @@ header {
     width: 100%;
     height: 90%;
 
-    background: rgb(255, 255, 255, 0.2);
+    background: #f4b58e;
     display: flex;
     align-items: center;
-    border-radius: 30px;
+    border-radius: 1vh;
     padding: 0 2% 0 0%;
     backdrop-filter: blur(4px) saturate(180%);
 
@@ -83,9 +98,10 @@ header {
     background: #f5e4c6;
     border: 0;
     height: 100%;
-    font-size: clamp(0.5rem, 1.75vw, 2rem);
-    border-bottom-left-radius: 30px;
-    border-top-left-radius: 30px;
+    width: 25%;
+    font-size: clamp(0.5rem, 1rem, 2rem);
+    border-bottom-left-radius: 1vh;
+    border-top-left-radius: 1vh;
     text-align: center;
     max-width: 50%;
 }
@@ -125,20 +141,15 @@ header {
     cursor: pointer;
 }
 
-.imagem-lupa-azul {
-    display: none;
-}
+
 
 .form-btn:hover>.imagem-lupa-black {
-    display: none;
+   transform: rotate(-90deg);
+   transition: 0.5s;
    
 }
 
-.form-btn:hover>.imagem-lupa-azul {
-    display: block;
-    
-    
-}
+
 
 
 
@@ -151,23 +162,28 @@ header {
    
 }
 .scroller{
+   
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-    margin: 4vh auto;
-    height: 20vh;
+   border-radius: 8px;
+    margin: 4vh auto 6vh auto;
+    padding-top: 2vw;
+    background: rgba(250, 232, 221, 0.8);
+
     width: 75vw;
     max-width: 1000px;
 }
 #image-container{
     display: flex;
     gap: 24px;
-    padding: 1.5vw;
-    /* margin: auto 2vw; */
+    padding: 1.5vw, 1.5vw , 1vw , 1.5vw;
+    margin: auto 2vw;
     overflow-x: auto;
    
 }
 #image-container img{
   
     border-radius: 25%;
+    /* box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px; */
     
     height: 15vh;
 }
@@ -199,8 +215,9 @@ header {
 
     box-shadow: 1px 2px 5px gray;
 
-    background: rgb(230, 218, 198);
-    background: linear-gradient(0deg, rgb(240, 161, 119) 0%, rgb(243, 139, 84) 100%);
+    background: rgba(250, 232, 221, 0.4);
+    
+    /* background: linear-gradient(0deg, rgb(250, 232, 221) 0%, rgb(229, 231, 203) 50%); */
 
 
     
@@ -358,7 +375,7 @@ header {
 
 footer {
     display: flex;
-    background-color: var(--cor-footer-background);
+    background-color: var(--cor-header-background);
     justify-content: space-around;
     align-items: center;
     padding-top: 4px;
@@ -402,15 +419,17 @@ footer {
       
 
     }
-    #titulo a,
-#titulo:hover,
-#titulo:link,
-#titulo:visited {
-    color: black;
+    .titulo a,
+.titulo:hover,
+.titulo:link,
+.titulo:visited {
+
     height: 60%;
-    text-decoration: none;
-    font-size: clamp(4rem, 4vw, 8rem);
+
  
+}
+#home-1,#contatos-2,#login{
+    display:none
 }
 
     .form-conateiner {
@@ -424,6 +443,10 @@ footer {
 
     }
     ::placeholder{
+        font-size: clamp(1rem, 4vw, 6rem);
+    }
+
+    .search-bar{
         font-size: clamp(1rem, 4vw, 6rem);
     }
 

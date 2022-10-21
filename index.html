@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 
 <head>
     <meta charset="UTF-8">
@@ -13,13 +13,20 @@
 <body>
     <div id="conteiner">
 
-        <header>
-            <h1><a id="titulo" href="./index.html">Livro de Receitas</a></h1>
+        <header id="header">
+
+            <a id="logo" class="titulo" href="./index.html">
+                <img src="./assets/Icones/logo.png" alt="">
+            </a>
+           <a id="home-1" class="titulo" href="#header"> <img  src="./assets/Icones/home(1).png" alt=""></a>
+          
+          
+           <a id="contatos-2" class="titulo" href="./contatos.html"><img src="./assets/Icones/contatos(2).png" alt=""></a>
            
             <div class="form-conateiner">
                 <form class="search-bar" action="#">
                     <select name="lugar" id="select" onclick="input(event)">
-                        <option value="todos">Todos</option>
+                        <option value="todos" selected='select'>Todos</option>
                         <option value="Aves">Aves</option>
                         <option value="Carnes">Carnes</option>
                         <option value="Doces">Doces</option>
@@ -30,19 +37,22 @@
                         
                         
                     </select>
+                 
 
 
                     <label for="receita-procurada"></label>
                     <input id="inputPesquisa" type="text" name="recceita-procurada" placeholder="Pesquisar..."   onkeyup=input(event) >
 
 
-                    <!-- <button id="btn" class="form-btn" type="submit" onclick="input(event)">
-                        <img class="imagem-lupa-black" src="./assets/Icones/lupa-50-b.png">
-                        <img class="imagem-lupa-azul" src="./assets/Icones/lupa-50-a.png">
-                    </button> -->
+                    <button id="btn" class="form-btn" type="submit">
+                        <img class="imagem-lupa-black" src="./assets/Icones/reset2.svg">
+                        
+                    </button>
 
                 </form>
+
             </div>
+            <img id="login" src="./assets/Icones/cadastro.png" alt="">
           
 
 
@@ -70,7 +80,7 @@
 
 
         </main>
-        <footer>
+        <footer id="footer">
             <div id="informacoes">
                 <h4>Projeto Intro-Web</h3>
                     <p id="nome-footer">Feito Por Alexandre Machado</p>
