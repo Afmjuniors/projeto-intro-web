@@ -757,7 +757,7 @@ function impressao() {
 
         const criandoASecao = document.createElement('section')
         criandoASecao.setAttribute('class', 'receita')
-        criandoASecao.setAttribute('id', receitaProcurada[index].nomeDoPrato.toUpperCase())
+        criandoASecao.setAttribute('id', receitaProcurada[index].nomeDoPrato)
 
         const referenciabase = document.getElementById('main')
         referenciabase.insertAdjacentElement('afterbegin', criandoASecao)
@@ -774,7 +774,7 @@ function impressao() {
 
         const crinadoNomedoPratoH2 = document.createElement('h2')
         crinadoNomedoPratoH2.setAttribute('class', 'nome-do-prato')
-        crinadoNomedoPratoH2.innerText = receitaProcurada[index].nomeDoPrato
+        crinadoNomedoPratoH2.innerText = receitaProcurada[index].nomeDoPrato.toUpperCase();
         criandolinknaReceita.insertAdjacentElement('beforeend', crinadoNomedoPratoH2)
 
         /**************CRIANDO DIVI VISUAL******************************** */
