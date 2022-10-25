@@ -700,11 +700,7 @@ for(let i of procuraDropDown)
 function relatorio(){
     let tamanho = 0;
     for(let rec of todasAsReceitas){
-        console.log(`Nome do Pra: ${rec.nomeDoPrato}
-        Tempo de preparo:${rec.tempoDePreparo}minutos
-        Porções:${rec.porcoes}
-        Tipo:${rec.tipo}
-        Numero de Ingredientes:${rec.ingredientes.length}`)
+        console.log(`Nome do Pra: ${rec.nomeDoPrato}\nTempo de preparo:${rec.tempoDePreparo}minutos\nPorções:${rec.porcoes}\nTipo:${rec.tipo}\nNumero de Ingredientes:${rec.ingredientes.length}`)
         for(let ingr in rec.ingredientes){
             console.log(rec.ingredientes[ingr].quantidade+" "+rec.ingredientes[ingr].medida+" de "+rec.ingredientes[ingr].nomeDoingrediente)
         }
@@ -712,13 +708,8 @@ function relatorio(){
         
         tamanho+=rec.ingredientes.length
     }
-    console.log(tamanho/(todasAsReceitas.length)+' Ingredientes por receita')
-    for(let rec of todasAsReceitas){
-        if(rec.jaFez)
-        {
-            console.log(rec.nomeDoPrato+" ja foi feito - "+rec.jaFez)
-        }
-    }
+    console.log("**************Medias de quantidade de ingredientes por receita\n"+tamanho/(todasAsReceitas.length)+' Ingredientes por receita')
+
 }
     
 
@@ -732,7 +723,9 @@ function relatorio(){
 impressao()
 
 
-
+for(let rec of receitaProcurada){
+   
+}
 
 
 
@@ -740,6 +733,10 @@ impressao()
 function impressao() {
 
     for (let index in receitaProcurada) {
+        if(receitaProcurada[index].jaFez)
+        {
+            console.log(receitaProcurada[index].nomeDoPrato+" ja foi feito - "+receitaProcurada[index].jaFez)
+        }
 
         const criandoImageScroller = document.createElement('img')
         const divScroller = document.getElementById('image-container')
@@ -886,9 +883,14 @@ function impressao() {
         }
     }
 
-relatorio();
+   
+ 
+
+
 
 }
+console.log("*****Relatorio de Todas as Receitas******");
+relatorio();
 
 
 
@@ -1040,6 +1042,8 @@ function input(event) {
 
 
 
+
+ 
 
 
 

@@ -99,7 +99,7 @@ header {
     border: 0;
     height: 100%;
     width: 25%;
-    font-size: clamp(0.5rem, 1rem, 2rem);
+    font-size: 0.625rem;
     border-bottom-left-radius: 1vh;
     border-top-left-radius: 1vh;
     text-align: center;
