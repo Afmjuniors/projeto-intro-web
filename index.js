@@ -755,6 +755,9 @@ function impressao() {
         const criandoASecao = document.createElement('section')
         criandoASecao.setAttribute('class', 'receita')
         criandoASecao.setAttribute('id', receitaProcurada[index].nomeDoPrato)
+     
+
+
 
         const referenciabase = document.getElementById('main')
         referenciabase.insertAdjacentElement('afterbegin', criandoASecao)
@@ -766,13 +769,24 @@ function impressao() {
 
         const criandolinknaReceita = document.createElement('a')
         criandolinknaReceita.setAttribute('class', 'receitalink')
-        criandolinknaReceita.setAttribute('href', receitaProcurada[index].linkImagem)
+        criandolinknaReceita.setAttribute('href', "#header")
         criandoDivNomeReceita.insertAdjacentElement('beforeend', criandolinknaReceita)
+
+        const novoLink = document.createElement('a')
+        novoLink.setAttribute('class', 'receitalink')
+        novoLink.setAttribute('href', "#header")
+        criandoDivNomeReceita.insertAdjacentElement('beforeend', novoLink)
 
         const crinadoNomedoPratoH2 = document.createElement('h2')
         crinadoNomedoPratoH2.setAttribute('class', 'nome-do-prato')
         crinadoNomedoPratoH2.innerText = receitaProcurada[index].nomeDoPrato.toUpperCase();
         criandolinknaReceita.insertAdjacentElement('beforeend', crinadoNomedoPratoH2)
+
+        const fraseVoltar = document.createElement('p')
+        fraseVoltar.setAttribute('class','frase-topo')
+        fraseVoltar.innerText = 'Voltar ao topo'
+        novoLink.insertAdjacentElement('beforeend', fraseVoltar)
+
 
         /**************CRIANDO DIVI VISUAL******************************** */
         const criandoumaDivVisual = document.createElement('div')
@@ -905,7 +919,7 @@ relatorio();
 
 
 
-function input(event) {
+function input() {
     let baseselecao = [...todasAsReceitas]
     const selectBar = seletor.selectedIndex
 
@@ -986,12 +1000,12 @@ function input(event) {
 
 
         } else {
-            console.log("entrou else");
+          
 
 
             if (palavras[1].length > 2) {
                 {
-                    console.log("entrou if");
+                  
                     word = novaInputTexto.toLowerCase().replace('ã', 'a').replace('ç', 'c').replace('á', 'a').replace('à', 'a').replace('é', 'e').replace('ó', 'o').replace('ò', 'o').replace('ê', 'e')
                     word = testeDicionario(word)
                     console.log(word);
@@ -1059,7 +1073,7 @@ function input(event) {
 function testeDicionario(palavra) {
 
     const arrayMousse = ['mousse', 'mouss', 'mouse', 'mosse', 'musse', 'ousse', 'mouce', 'mouc', 'mouce', 'moce', 'muce', 'ouce', 'moussede', 'mussede']
-    const arrayCamarao = ['camara', 'camaro', 'camaao', 'caamarao', 'camrao', 'caarao', 'cmarao', 'amarao', 'camoaraao', 'camaraona', 'decamarao', 'camaraono']
+    const arrayCamarao = ['camara', 'camaro', 'camaao', 'caamarao', 'camrao', 'caarao', 'cmarao', 'amarao', 'camoaraao', 'camaraona','camaraode', 'decamarao', 'camaraono','camaarao']
     const arrayMoranga = ['moranga', 'moraga', 'moanga', 'oranga', 'demoranga', 'morangana', 'namoranga']
     const arrayLimao = ['limao', 'lima', 'limo', 'liao', 'lmao', 'imao', 'delimao', 'nolimao', 'limaode', 'limaona', 'limaono']
     const arrayMolho = ['molho', 'molh', 'molo', 'moho', 'mlho', 'olho', 'molio', 'molhio', 'molhos', 'molhode']
