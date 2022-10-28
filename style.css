@@ -227,6 +227,8 @@ header {
 
 .nome-da-receita {
     margin-top: 4vh;
+    display: flex;
+   
 
     grid-row: 1;
     grid-column: 1 / -1;
@@ -237,12 +239,13 @@ header {
     color: #141108;
     text-align: center;
 
- 
-
-
-
 }
 
+.receitalink{
+    
+    display: flex;
+    justify-content: flex-end;
+}
 .receitalink:link,
 .receitalink:visited {
     color: #141108;
@@ -256,7 +259,14 @@ header {
 .receitalink:active {
     color: var(--cor-main-background);
 }
-
+.nome-do-prato{
+    justify-self: center;
+}
+.frase-topo{
+    position: absolute;
+    right: 14%;
+    font-size: 0.625rem;
+}
 /* ***********************VISUAL****************** */
 .visual {
     grid-row: 2;
